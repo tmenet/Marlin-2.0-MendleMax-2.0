@@ -690,9 +690,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-  	#define DEFAULT_Kp 24.40
-  	#define DEFAULT_Ki 3.01
-  	#define DEFAULT_Kd 49.48
+  	#define DEFAULT_Kp 31.0788
+  	#define DEFAULT_Ki 4.6204
+  	#define DEFAULT_Kd 52.2629
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -779,9 +779,10 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 58.72 // mENDELmAX 2.0 24v into 4mm borosilicate steel top
-  #define DEFAULT_bedKi 3.38
-  #define DEFAULT_bedKd 254.83
+  #define DEFAULT_bedKp 29.7090
+  #define DEFAULT_bedKi 1.7809
+  #define DEFAULT_bedKd 330.4037
+
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #else
@@ -1517,7 +1518,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 52, 0, -0.65 }
+#define NOZZLE_TO_PROBE_OFFSET { 52, 0, -0.30 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -2593,8 +2594,8 @@
 // Note: Test audio output with the G-Code:
 //  M300 S<frequency Hz> P<duration ms>
 //
-//#define LCD_FEEDBACK_FREQUENCY_DURATION_MS 2
-//#define LCD_FEEDBACK_FREQUENCY_HZ 5000
+#define LCD_FEEDBACK_FREQUENCY_DURATION_MS 2
+#define LCD_FEEDBACK_FREQUENCY_HZ 5000
 
 //=============================================================================
 //======================== LCD / Controller Selection =========================
